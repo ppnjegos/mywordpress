@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="sr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Контакт - Петар Петровић Његош</title>
+    <title>Контакт - ОШ Петар Петровић Његош</title>
     
     <link rel="stylesheet" id="wp-block-library-css" href="https://ppnjegos.github.io/mywordpress/wp-includes/css/dist/block-library/style.min.css?ver=6.4.2" type="text/css" media="all">
     <link rel="stylesheet" id="graduate-fonts-css" href="https://ppnjegos.github.io/mywordpress/wp-content/fonts/3b42a6b44a236a93b61be41a53a69431.css" type="text/css" media="all">
@@ -12,16 +12,19 @@
     <link rel="stylesheet" id="graduate-blue-css" href="https://ppnjegos.github.io/mywordpress/wp-content/themes/graduate/assets/css/blue.min.css?ver=6.4.2" type="text/css" media="all">
     
     <style>
-        .kontakt-info-box { background: #f9f9f9; padding: 30px; border-radius: 5px; border-top: 4px solid #334f74; margin-bottom: 30px; }
-        .info-stavka { margin-bottom: 15px; display: flex; align-items: center; font-size: 16px; }
+        .kontakt-info-box { background: #f9f9f9; padding: 30px; border-radius: 5px; border-top: 4px solid #334f74; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .info-stavka { margin-bottom: 15px; display: flex; align-items: center; font-size: 16px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .info-stavka:last-child { border-bottom: none; }
         .info-stavka i { color: #E94B4C; margin-right: 15px; font-size: 20px; width: 25px; text-align: center; }
-        .map-container { border: 5px solid #eee; border-radius: 5px; overflow: hidden; height: 400px; width: 100%; }
+        .info-stavka strong { color: #334f74; margin-right: 5px; }
+        .map-container { border: 5px solid #eee; border-radius: 5px; overflow: hidden; height: 450px; width: 100%; margin-top: 20px; }
         .map-container iframe { width: 100%; height: 100%; border: 0; }
     </style>
 </head>
 
 <body class="page-template-default page wp-custom-logo wide no-sidebar">
     <div id="page" class="site">
+        
         <header id="masthead" class="site-header" role="banner">
             <div class="container">
                 <div class="site-branding pull-left">
@@ -53,6 +56,7 @@
                 <div id="primary" class="content-area">
                     <main id="main" class="site-main" role="main">
                         <article class="page type-page status-publish hentry">
+                            
                             <header class="entry-header">
                                 <h1 class="entry-title">Контакт информације</h1>
                             </header>
@@ -61,15 +65,15 @@
                                 <div class="kontakt-info-box">
                                     <div class="info-stavka">
                                         <i class="fa fa-map-marker"></i>
-                                        <span><strong>Адреса:</strong> Горње Кусце бб, 60000 Гњилане</span>
+                                        <span><strong>Адреса:</strong> Горње Кусце, 38250 Гњилане</span>
                                     </div>
                                     <div class="info-stavka">
                                         <i class="fa fa-phone"></i>
-                                        <span><strong>Телефон:</strong> +381 (0) XX XXX XXX</span>
+                                        <span><strong>Телефон:</strong> +381 (0) 65 857 98 43</span>
                                     </div>
                                     <div class="info-stavka">
                                         <i class="fa fa-envelope"></i>
-                                        <span><strong>Е-пошта:</strong> <a href="mailto:skola@primera.com">skola@primera.com</a></span>
+                                        <span><strong>Е-пошта:</strong> <a href="mailto:osppnjegos@yahoo.com">osppnjegos@yahoo.com</a></span>
                                     </div>
                                     <div class="info-stavka">
                                         <i class="fa fa-clock-o"></i>
@@ -77,18 +81,19 @@
                                     </div>
                                 </div>
 
-                                <h3>Локација школе</h3>
+                                <h3 style="color: #334f74; margin-top: 40px;"><i class="fa fa-globe"></i> Наша локација на мапи</h3>
                                 <div class="map-container">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11756.917154563385!2d21.4552033!3d42.4866389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1354f3929424e83d%3A0xc0747a82b0126a1!2sGornje%20Kusce!5e0!3m2!1ssr!2srs!4v1700000000000!5m2!1ssr!2srs" allowfullscreen="" loading="lazy"></iframe>
+                                    <iframe src="https://maps.app.goo.gl/tJeZC6kKtJooMty66" allowfullscreen="" loading="lazy"></iframe>
                                 </div>
                             </div>
+
                         </article>
                     </main>
                 </div>
             </div>
         </div>
 
-        <footer id="colophon" class="site-footer">
+        <footer id="colophon" class="site-footer" role="contentinfo">
             <div class="site-info clear">
                 <div class="container">
                     <p>Copyright &copy; 2023 Petar Petrovic Njegos. All Rights Reserved</p>
@@ -96,5 +101,8 @@
             </div>
         </footer>
     </div>
+
+    <script src="https://ppnjegos.github.io/mywordpress/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+    <script src="https://ppnjegos.github.io/mywordpress/wp-content/themes/graduate/assets/js/custom.min.js?ver=6.4.2"></script>
 </body>
 </html>
