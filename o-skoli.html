@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="sr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>О школи - Петар Петровић Његош</title>
+    <title>О школи - ОШ Петар Петровић Његош</title>
     
-    <link rel="stylesheet" id="wp-block-library-css" href="https://ppnjegos.github.io/mywordpress/wp-includes/css/dist/block-library/style.min.css?ver=6.4.2" type="text/css" media="all">
-    <link rel="stylesheet" id="graduate-fonts-css" href="https://ppnjegos.github.io/mywordpress/wp-content/fonts/3b42a6b44a236a93b61be41a53a69431.css" type="text/css" media="all">
-    <link rel="stylesheet" id="font-awesome-css" href="https://ppnjegos.github.io/mywordpress/wp-content/themes/graduate/assets/plugins/css/font-awesome.min.css?ver=6.4.2" type="text/css" media="all">
-    <link rel="stylesheet" id="graduate-style-css" href="https://ppnjegos.github.io/mywordpress/wp-content/themes/graduate/style.css?ver=6.4.2" type="text/css" media="all">
-    <link rel="stylesheet" id="graduate-blue-css" href="https://ppnjegos.github.io/mywordpress/wp-content/themes/graduate/assets/css/blue.min.css?ver=6.4.2" type="text/css" media="all">
+    <link rel="stylesheet" id="wp-block-library-css" href="wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="graduate-fonts-css" href="wp-content/fonts/3b42a6b44a236a93b61be41a53a69431.css" type="text/css" media="all">
+    <link rel="stylesheet" id="font-awesome-css" href="wp-content/themes/graduate/assets/plugins/css/font-awesome.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="jquery-sidr-light-css" href="wp-content/themes/graduate/assets/plugins/css/jquery.sidr.light.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="graduate-style-css" href="wp-content/themes/graduate/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="graduate-blue-css" href="wp-content/themes/graduate/assets/css/blue.min.css" type="text/css" media="all">
     
     <style>
         .dokumenti-lista { list-style: none; padding: 0; margin-top: 30px; }
@@ -23,6 +24,21 @@
         .dokumenti-lista li:hover { background: #f0f4f8; transform: translateX(5px); }
         .dokumenti-lista a { color: #334f74; font-weight: bold; text-decoration: none; display: flex; align-items: center; }
         .dokumenti-lista i { margin-right: 15px; color: #E94B4C; font-size: 1.2em; }
+
+        /* Mobilni meni dugme */
+        #sidr-left-top-button {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #334f74;
+            z-index: 9999;
+        }
+        @media screen and (max-width: 768px) {
+            #sidr-left-top-button { display: block; }
+            .main-navigation { display: none; }
+        }
     </style>
 </head>
 
@@ -32,8 +48,8 @@
             <div class="container">
                 <div class="site-branding pull-left">
                     <div class="site-logo">
-                        <a href="index.html" class="custom-logo-link" rel="home">
-                            <img width="200" height="70" src="https://ppnjegos.github.io/mywordpress/wp-content/uploads/2023/12/logo.png" class="custom-logo" alt="Logo">
+                        <a href="index.html">
+                            <img width="200" height="70" src="wp-content/uploads/2023/12/logo.png" class="custom-logo" alt="Logo">
                         </a>
                     </div>
                     <div id="site-header">
@@ -53,6 +69,16 @@
                 </div>
             </nav>
         </header>
+
+        <nav id="sidr-left-top" class="mobile-menu sidr left">
+            <ul>
+                <li><a href="index.html">Почетна</a></li>
+                <li><a href="kontakt.html">Контакт</a></li>
+                <li><a href="o-skoli.html">О школи</a></li>
+                <li><a href="obavestenja.html">Обавештења</a></li>
+            </ul>
+        </nav>
+        <a id="sidr-left-top-button" href="#sidr-left-top"><i class="fa fa-bars"></i></a>
 
         <div id="content" class="site-content">
             <div class="container page-section">
@@ -82,9 +108,18 @@
             </div>
         </footer>
     </div>
+
+    <script src="wp-includes/js/jquery/jquery.min.js"></script>
+    <script src="wp-content/themes/graduate/assets/plugins/js/jquery.sidr.min.js"></script>
+    <script src="wp-content/themes/graduate/assets/js/navigation.min.js"></script>
+    <script src="wp-content/themes/graduate/assets/js/custom.min.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $('#sidr-left-top-button').sidr({
+                name: 'sidr-left-top',
+                side: 'left'
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
-
